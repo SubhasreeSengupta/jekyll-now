@@ -3,7 +3,7 @@ layout: post
 title: KEEN QUARTET'S PROJECT
 ---
 
-#My 1st header
+## My 1st header
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 

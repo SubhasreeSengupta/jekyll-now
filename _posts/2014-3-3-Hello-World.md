@@ -3,7 +3,11 @@ layout: post
 title: KEEN QUARTET'S PROJECT
 ---
 
-## My 1st header
+## Preprocessing 
+
+The 1st step is to convert a raw image file into a spectrogram.
+
+Below we show a spectrogram image.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 

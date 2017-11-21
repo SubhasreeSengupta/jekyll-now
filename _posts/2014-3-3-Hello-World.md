@@ -1,6 +1,6 @@
 ---
 layout: post
-title: KEEN QUARTET'S PROJECT
+title: Automatic music transcription for polyphonic music instruments.
 ---
 
 ## Preprocessing 

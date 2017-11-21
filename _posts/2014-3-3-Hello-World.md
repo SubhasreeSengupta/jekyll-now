@@ -22,6 +22,6 @@ We use STFT transform function to create a time-frequency representation of our 
 
 CQT transform is used in our experiments for automatic transcription.
 
-![_config.yml]({{ site.baseurl }}/images/CQT transform.PNG)
+![_config.yml]({{ site.baseurl }}/images/CQT_transform.PNG)
 
 

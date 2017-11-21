@@ -1,9 +1,9 @@
 ---
 layout: post
-title: You're up and running!
+title: KEEN QUARTET'S PROJECT
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+#My 1st header
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 

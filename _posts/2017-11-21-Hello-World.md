@@ -11,7 +11,7 @@ The the following sections, we describe and visualize several aspects of our pro
 
 Below we present a visual presentation of our project pipeline
 
-![_config.yml]({{ site.baseurl }}/images/project_pipeline.PNG)
+![_config.yml]({{ site.baseurl }}/images/Project_pipeline.PNG)
 
 # Dataset
 

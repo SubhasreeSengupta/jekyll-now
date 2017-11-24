@@ -28,7 +28,7 @@ In each of the sections below we describe each of the 3 main steps of the pipeli
 # Instrument Segregation:
 In order to make an end to end approach, we need to focus on filtering each instrument out of any given music piece. This part is analogous to source separation in music, which is also an ongoing area of research and is extremely difficult, as you need to have a way to get ground truth labels for each source(instrument) and also tune the loss function in such a way that the loss function also accounts for increasing the difference among each instrument at the same time as recongizing it. Below we describe our approach. Before we describe the model architecture we briefly mention some preprocessing steps.
 
-## Preprocessing 
+### Preprocessing 
 
 The figure below shows the spectrogram of an audio file we used in our dataset.
 Spectograms are a common way of visualizing audio signals. The x-axis represents time, y-axis represents frequency of sounds at that time. The different intensities of colors are used to express a 3rd dimension - amplitude corresponding to a particular frequency.
@@ -44,7 +44,7 @@ After the initial preprocessing, we also max-normalize the signal data by time a
 We use STFT transform function to create a time-frequency representation of our data. 
 ![_config.yml]({{ site.baseurl }}/images/STFT transform.PNG)
 
-## Model Description:
+### Model Description:
 Our approach is based on the paper : TO-DO insert paper link. 
 We use an LSTM based model architecture. Visually the architecture we use is:
 
@@ -62,7 +62,7 @@ We also experimented with different model architectures, with different hyperpar
 The model achieves separating the outputs into two parts, separating by each instrument is adds several layers of complexity in terms of preprocessing, identifying ground truth labels, defining the loss function etc,  and hence is a direction for future work.
 
 
-## Dataset:
+### Dataset:
   ### TO-DO describe the Mir-1k dataset.
 
 # Predominant instrument classification:
@@ -70,15 +70,15 @@ The model achieves separating the outputs into two parts, separating by each ins
 
 # Automatic transcription
 
-## Preprocessing:
+### Preprocessing:
 CQT transform is used in our experiments for automatic transcription.
 
 ![_config.yml]({{ site.baseurl }}/images/CQT_transform.PNG)
 
 
-## Model Description
+### Model Description
 
-## Dataset for Automatic transcription:
+### Dataset for Automatic transcription:
 Before we delve into the technical details of the project, we briefly describe the dataset we use. We used the MAPS (MIDI Aligned Piano Sounds) dataset, which is a freely accessable dataset focused on piano melodies as our dataset. It is composed by isolated notes, random-pitch chords, usual musical chords and pieces of music. The database provides a large amount of sounds obtained in various recording conditions. 
 MAPS provides recordings with CD quality (16-bit, 44-kHz sampled stereo audio) and the related aligned MIDI files as ground truth labels. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
 

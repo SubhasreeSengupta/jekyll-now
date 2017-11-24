@@ -34,7 +34,7 @@ After the initial preprocessing, we also max-normalize the signal data by time a
 We use STFT transform function to create a time-frequency representation of our data. 
 ![_config.yml]({{ site.baseurl }}/images/STFT transform.PNG)
 
-# Model Description:
+## Model Description:
 Our approach is based on the paper : TO-DO insert paper link. 
 We use an LSTM based model architecture. Visually the architecture we use is:
 

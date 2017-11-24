@@ -13,14 +13,16 @@ Below we present a visual presentation of our project pipeline
 
 ![_config.yml]({{ site.baseurl }}/images/Project_pipeline.PNG)
 
-# Dataset
+In the following sections we will describe each of the steps in the pipeline.
 
-Before we delve into the technical details of the project, we briefly describe the dataset we use. We used the MAPS (MIDI Aligned Piano Sounds) dataset, which is a freely accessable dataset focused on piano melodies as our dataset. It is composed by isolated notes, random-pitch chords, usual musical chords and pieces of music. The database provides a large amount of sounds obtained in various recording conditions. 
-MAPS provides recordings with CD quality (16-bit, 44-kHz sampled stereo audio) and the related aligned MIDI files as ground truth labels. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
+# Source Separation
+This part of the pipeline acts as more of a preprocessing step. This step is used to extract the audio signals corresponding to the different instruments we have in our musical piece. We focus on an approach that is best suited for extracting 2 audio signals from a musical mixture.
 
-Inorder to use this we first apply some pre-processing steps which are as described below. Finally, the total number of frames in our dataset are ~5 million, which amounts to a huge corpora of audio signals for transcription.
 
-# Preprocessing 
+
+
+
+## Preprocessing 
 
 The figure below shows the spectrogram of an audio file we used in our dataset.
 Spectograms are a common way of visualizing audio signals. The x-axis represents time, y-axis represents frequency of sounds at that time. The different intensities of colors are used to express a 3rd dimension - amplitude corresponding to a particular frequency.
@@ -40,6 +42,14 @@ We use STFT transform function to create a time-frequency representation of our 
 CQT transform is used in our experiments for automatic transcription.
 
 ![_config.yml]({{ site.baseurl }}/images/CQT_transform.PNG)
+
+
+# Dataset
+
+Before we delve into the technical details of the project, we briefly describe the dataset we use. We used the MAPS (MIDI Aligned Piano Sounds) dataset, which is a freely accessable dataset focused on piano melodies as our dataset. It is composed by isolated notes, random-pitch chords, usual musical chords and pieces of music. The database provides a large amount of sounds obtained in various recording conditions. 
+MAPS provides recordings with CD quality (16-bit, 44-kHz sampled stereo audio) and the related aligned MIDI files as ground truth labels. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
+
+Inorder to use this we first apply some pre-processing steps which are as described below. Finally, the total number of frames in our dataset are ~5 million, which amounts to a huge corpora of audio signals for transcription.
 
 
 

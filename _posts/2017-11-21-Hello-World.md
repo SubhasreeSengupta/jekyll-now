@@ -34,11 +34,19 @@ After the initial preprocessing, we also max-normalize the signal data by time a
 We use STFT transform function to create a time-frequency representation of our data. 
 ![_config.yml]({{ site.baseurl }}/images/STFT transform.PNG)
 
-# Model architecture:
+# Model Description:
 Our approach is based on the paper : TO-DO insert paper link. 
 We use an LSTM based model architecture. Visually the architecture we use is:
 
 ![_config.yml]({{ site.baseurl }}/images/Source_sep_model.PNG)
+
+The masking layer is a technique by which the probabilities from each dense layer for each source are used to apply a mask to the initial spectrogram to transform the spectrogram such that the source based on which the mask is applied is predominantly represented.
+
+Finally, an inserve stft transform is applied to convert the spectrogram which a time-frequency magnitude representation back to audio signals, which we store in .wav file. 
+
+Below we show a visual captured from the training of the network:
+![_config.yml]({{ site.baseurl }}/images/source_sep_loss.PNG)
+
 
 
 
@@ -50,7 +58,14 @@ CQT transform is used in our experiments for automatic transcription.
 ![_config.yml]({{ site.baseurl }}/images/CQT_transform.PNG)
 
 
+## Model Description
+
 # Dataset
+## Dataset for Source separation:
+#TO-DO describe the Mir-1k dataset.
+
+
+## Dataset for Automatic transcription:
 Before we delve into the technical details of the project, we briefly describe the dataset we use. We used the MAPS (MIDI Aligned Piano Sounds) dataset, which is a freely accessable dataset focused on piano melodies as our dataset. It is composed by isolated notes, random-pitch chords, usual musical chords and pieces of music. The database provides a large amount of sounds obtained in various recording conditions. 
 MAPS provides recordings with CD quality (16-bit, 44-kHz sampled stereo audio) and the related aligned MIDI files as ground truth labels. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
 

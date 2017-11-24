@@ -38,7 +38,7 @@ We use STFT transform function to create a time-frequency representation of our 
 Our approach is based on the paper : TO-DO insert paper link. 
 We use an LSTM based model architecture. Visually the architecture we use is:
 
-![_config.yml]({{ site.baseurl }}/images/source_sep_loss.PNG)
+![_config.yml]({{ site.baseurl }}/images/Source_sep_model.PNG)
 
 
 

@@ -3,10 +3,11 @@ layout: post
 title: Automatic Music Transcription for Polyphonic Music for Multiple Instruments
 ---
 
-# Motivation
-Music is an integral part of human life. It has its own charm and magic. Yet, interestingly, there is complex mathematical structure embedded in music. Many researchers and scientists have been working to on different aspects of music, like learning the positive psycholocgial effects of music, identifyting the underlying musical style in a musical piece, just to name a few. Deep Learning has been successful in areas such as computer vision, natural language processing. It has performed better than humans in tasks like image classification, object recognition and many more. Given there exists a mathematical framework embedded in music, there have been attempts by researchers to use the power of deep learning in this domain to achieve a variety of tasks such as predicting song similarity, composer identification and even music generation. 
+ 
 
 # Project Objective
+Music is an integral part of human life. It has its own charm and magic. Yet, interestingly, there is complex mathematical structure embedded in music. Many researchers and scientists have been working to on different aspects of music, like learning the positive psycholocgial effects of music, identifyting the underlying musical style in a musical piece, just to name a few. Deep Learning has been successful in areas such as computer vision, natural language processing. It has performed better than humans in tasks like image classification, object recognition and many more. Given there exists a mathematical framework embedded in music, there have been attempts by researchers to use the power of deep learning in this domain to achieve a variety of tasks such as predicting song similarity, composer identification and even music generation.
+
 In our project, we would like to address the problem of "Automatic Music Transcription for Polyphonic Music involving Multiple Instruments". Automatic Music Transcription (AMT) is an open problem in Music Information Retrieval(MIR). AMT aims to generate a symbolic representation, a near-score like transcription, given a polyphonic musical piece. This is a difficult problem for the following reasons: (1) In polyphonic music, there exists a complex interation and overlap of harmonies arising from different acoustic signals in the melody. (2) Seperating the sources of music in a given piece with multiple instruments is extremely difficult. So AMT fails to match human performance. We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim . 
 
 

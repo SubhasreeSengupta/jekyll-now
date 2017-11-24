@@ -16,11 +16,7 @@ Below we present a visual presentation of our project pipeline
 In the following sections we will describe each of the steps in the pipeline.
 
 # Source Separation
-This part of the pipeline acts as more of a preprocessing step. This step is used to extract the audio signals corresponding to the different instruments we have in our musical piece. We focus on an approach that is best suited for extracting 2 audio signals from a musical mixture.
-
-
-
-
+This part of the pipeline acts as more of a preprocessing step. This step is used to extract the audio signals corresponding to the different instruments we have in our musical piece. We focus on an approach that is best suited for extracting 2 audio signals from a musical mixture. Before we describe the model architecture we briefly mention some preprocessing necessary.
 
 ## Preprocessing 
 
@@ -35,17 +31,26 @@ The very first preprocessing step is to convert our audio files from dual channe
 
 After the initial preprocessing, we also max-normalize the signal data by time and downsample the data.
 
-We use STFT transform function to create a time-frequency representation of our data. This transformation was used for our experiments on Source separation.
-
+We use STFT transform function to create a time-frequency representation of our data. 
 ![_config.yml]({{ site.baseurl }}/images/STFT transform.PNG)
 
+# Model architecture:
+Our approach is based on the paper : TO-DO insert paper link. 
+We use an LSTM based model architecture. Visually the architecture we use is:
+
+![_config.yml]({{ site.baseurl }}/images/source_sep_loss.PNG)
+
+
+
+# Automatic transcription
+
+## Preprocessing:
 CQT transform is used in our experiments for automatic transcription.
 
 ![_config.yml]({{ site.baseurl }}/images/CQT_transform.PNG)
 
 
 # Dataset
-
 Before we delve into the technical details of the project, we briefly describe the dataset we use. We used the MAPS (MIDI Aligned Piano Sounds) dataset, which is a freely accessable dataset focused on piano melodies as our dataset. It is composed by isolated notes, random-pitch chords, usual musical chords and pieces of music. The database provides a large amount of sounds obtained in various recording conditions. 
 MAPS provides recordings with CD quality (16-bit, 44-kHz sampled stereo audio) and the related aligned MIDI files as ground truth labels. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
 

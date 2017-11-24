@@ -68,6 +68,8 @@ The model achieves separating the outputs into two parts, separating by each ins
 ### Dataset:
  We use the MIR-1K dataset (MIR stands for Music information retrieval). It comprises of a variety of songs, a total of 1000 musical clips. This dataset is annotated with several musical features such as pitch, timbre, etc. We use this dataset since it is a popular dataset used in source separation literature as it captures various aspects of music and hence forms a very powerful dataset to be used for training. We use to the .wav files (audio signals) to build and test our model.
  
+#### TO DO: Describe evaluation.
+ 
 # Predominant instrument classification:
 
 

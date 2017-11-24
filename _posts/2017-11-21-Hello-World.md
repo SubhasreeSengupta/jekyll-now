@@ -8,6 +8,8 @@ Music is an integral part of human life. It has its own charm and magic. Yet, in
 
 # Project Objective
 In our project, we would like to address the problem of "Automatic Music Transcription for Polyphonic Music involving Multiple Instruments". Automatic Music Transcription (AMT) is an open problem in Music Information Retrieval(MIR). AMT aims to generate a symbolic representation, a near-score like transcription, given a polyphonic musical piece. This is a difficult problem for the following reasons: (1) In polyphonic music, there exists a complex interation and overlap of harmonies arising from different acoustic signals in the melody. (2) Seperating the sources of music in a given piece with multiple instruments is extremely difficult. So AMT fails to match human performance. We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim . 
+
+
 In order to transcribe each instrument in a musical piece we first addressed the challenge of instrument separation, the output of which are separate wav files corresponding to the instruments we separted out. Next to further validate the separation step, we design a "predominant instrument classifier", the goal of which is to identify the predominant instrument in each musical piece. This step compliments the transcription process and acts as a validation to the output of the separation step. Finally we build a deep learning model for automatic transcription, which is the ultimate goal of our project.  
 
 In the the following sections, we describe and visualize several aspects of our project.

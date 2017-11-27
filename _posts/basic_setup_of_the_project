@@ -1,5 +1,0 @@
-Here is the description of the basic setup that we used.
-
-<br>Google Cloud instance: 
-Set up a gpu instance and set up tensorflow other dependencies by installing from sources. This improves the performance of the GPU. We were able to achieve a speedup of about 20 times compared to the that on the machine.
-

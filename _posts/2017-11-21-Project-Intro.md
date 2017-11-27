@@ -8,7 +8,9 @@ title: Automatic Music Transcription for Polyphonic Music for Multiple Instrumen
 # Project Objective
 Music is an integral part of human life. It has its own charm and magic. Yet, interestingly, there is complex mathematical structure embedded in music. Many researchers and scientists have been working to on different aspects of music, like learning the positive psycholocgial effects of music, identifyting the underlying musical style in a musical piece, just to name a few. Deep Learning has been successful in areas such as computer vision, natural language processing. It has performed better than humans in tasks like image classification, object recognition and many more. Given there exists a mathematical framework embedded in music, there have been attempts by researchers to use the power of deep learning in this domain to achieve a variety of tasks such as predicting song similarity, composer identification and even music generation.
 
-In our project, we would like to address the problem of "Automatic Music Transcription for Polyphonic Music involving Multiple Instruments". Automatic Music Transcription (AMT) is an open problem in Music Information Retrieval(MIR). AMT aims to generate a symbolic representation, a near-score like transcription, given a polyphonic musical piece. This is a difficult problem for the following reasons: (1) In polyphonic music, there exists a complex interation and overlap of harmonies arising from different acoustic signals in the melody. (2) Seperating the sources of music in a given piece with multiple instruments is extremely difficult. So AMT fails to match human performance. We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim . 
+In our project, we would like to address the problem of "Automatic Music Transcription for Polyphonic Music involving Multiple Instruments". Automatic Music Transcription (AMT) is an open problem in Music Information Retrieval(MIR). AMT aims to generate a symbolic representation, a near-score like transcription, given a polyphonic musical piece. This is a difficult problem for the following reasons: 
+- In polyphonic music, there exists a complex interation and overlap of harmonies arising from different acoustic signals in the melody.
++ Seperating the sources of music in a given piece with multiple instruments is extremely difficult. So AMT fails to match human performance. We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim . 
 
 
 In order to transcribe each instrument in a musical piece we first addressed the challenge of instrument separation, the output of which are separate wav files corresponding to the instruments we separted out. Next to further validate the separation step, we design a "predominant instrument classifier", the goal of which is to identify the predominant instrument in each musical piece. This step compliments the transcription process and acts as a validation to the output of the separation step. Finally we build a deep learning model for automatic transcription, which is the ultimate goal of our project.  
@@ -22,10 +24,10 @@ Below we present a visual presentation of our project pipeline
 ![_config.yml]({{ site.baseurl }}/images/Project_pipeline.PNG)
 
 
-In each of the sections below we describe each of the 3 main steps of the pipeline.
-(1) We first describe the instrument separation task.
-(2) Then we motivate the need for the predominant instrument identification task and describe our approach.
-(3) We finally connect (1),(2) to address the transcription process and describe our method.
+In the sections below we describe each of the 3 main steps of the pipeline:
+1. Separation of the sources in the given music file
+2. Identifying the predominant instrument in each of these files
+3. Do transcription for each file based on the labels obtained for them 
 
 
 # Instrument Segregation:
@@ -71,7 +73,17 @@ The model achieves separating the outputs into two parts, separating by each ins
 #### TO DO: Describe evaluation.
  
 # Predominant instrument classification:
+In order to address the problem of transcription of music files involving multiple instruments, it is higly necessary to separate the sources which is complicated task in itself. Once we have the separated files, we need to identify the predominant source for each. this is the second step of the pipeline.
 
+### Preprocessing
+
+### Model Description
+
+### Dataset
+We used the MAPS ( dataset. This dataset 
+
+### References
+We referred to the paper <<<<<<TTTTTOOOOOOO refer the paper>>>>> 
 
 # Automatic transcription
 

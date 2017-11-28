@@ -44,10 +44,16 @@ We preprocessed and trained the MAPS dataset using the GCP GPU instance (configu
 
 **Approach 1:** The entire dataset trained for 7 epochs before early stopping. 
 
-**Approach 2:** In this approach, the different categories of full musical pieces were trained per folder. The training stopped at 63 epochs, 20 epochs, 7 epochs, 7 epochs, 7 epochs for the training folders.  
+**Approach 2:** In this approach, the different categories of full musical pieces were trained per folder. The training stopped at 63 epochs, 20 epochs, 7 epochs, 7 epochs, 7 epochs for the training folders. 
+
+## Metrics
 
 ## Results
-(output visualization)
+Precision: 5.74  
+Recall: 39.76  
+f1 score: 0.1  
+loss: 0.1368  
+validation accuracy: 96.5  
 
 ## References
 

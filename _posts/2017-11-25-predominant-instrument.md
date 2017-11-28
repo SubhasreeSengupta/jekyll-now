@@ -53,3 +53,8 @@ Here are the results obtained during the training of the model.
 ## References
 
 1. Han, Yoonchang, et al. "Deep convolutional neural networks for predominant instrument recognition in polyphonic music." IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP) 25.1 (2017): 208-221.
+
+2. IRMAS Dataset: 
+
+Bosch, J. J., Janer, J., Fuhrmann, F., & Herrera, P. “A Comparison of Sound Segregation Techniques for Predominant Instrument Recognition in Musical Audio Signals”, in Proc. ISMIR (pp. 559-564), 2012.
+

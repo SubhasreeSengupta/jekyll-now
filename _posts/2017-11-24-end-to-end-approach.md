@@ -74,7 +74,4 @@ Fix the issues related to post processing and predict the piano transcription fo
 1. Sigtia, Siddharth, Emmanouil Benetos, and Simon Dixon. "An end-to-end neural network for polyphonic piano music transcription." IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP) 24.5 (2016): 927-939.  
 
 **MAPS** Dataset:
-
-- V. Emiya, R. Badeau and B. David, Multipitch estimation of piano sounds using a new probabilistic spec tral smoothness principle, IEEE Transactions on Audio, Speech and Language Processing, (to be published);
-
-+ V. Emiya, Transcription automatique de la musique de piano, Thèse de doctorat, Telecom Paris-Tech, 2008 (in French).
+1. Multi-pitch estimation of piano sounds using a new probabilistic spectral smoothness principle, V. Emiya, R. Badeau, B. David, IEEE Transactions on Audio, Speech and Language Processing, 2010.

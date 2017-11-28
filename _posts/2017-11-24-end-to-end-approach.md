@@ -51,5 +51,7 @@ Approach 2: In this approach, the different categories of full musical pieces we
 • An End-to-End Neural Network for Polyphonic Piano Music Transcription, Siddharth Sigtia, Emmanouil Benetos, and Simon Dixon
 
 MAPS Dataset:
+
 • V. Emiya, R. Badeau and B. David, Multipitch estimation of piano sounds using a new probabilistic spec tral smoothness principle, IEEE Transactions on Audio, Speech and Language Processing, (to be published);
+
 • V. Emiya, Transcription automatique de la musique de piano, Thèse de doctorat, Telecom Paris-Tech, 2008 (in French).

@@ -57,7 +57,7 @@ f1 score: 0.1
 loss: 0.1368  
 validation accuracy: 96.5  
 
-## Conclusion
+## Observations
 
 We were able to succesfully complete the preprocessing and training of the model. We faced challenges in our post processing to infer the results predicted by the model and capture the information required for capturing the transcription.
 
@@ -65,7 +65,7 @@ The issues faced involved finding the most likely notes per time frame and each 
 
 Also, we observed a very high validation and training accuracy and we suspect a severe overfitting in the model. Various attempts to train the model with different dataset combinations, hyperparameter values and pre processing methods could not improve the model's generalization.
 
-## Further work
+## Possible Improvements
 
 Fix the issues related to post processing and predict the piano transcription for the given input pieces.
 
@@ -75,3 +75,5 @@ Fix the issues related to post processing and predict the piano transcription fo
 
 2. MAPS Dataset:
 Multi-pitch estimation of piano sounds using a new probabilistic spectral smoothness principle, V. Emiya, R. Badeau, B. David, IEEE Transactions on Audio, Speech and Language Processing, 2010.
+
+[BACK HOME](https://subhasreesengupta.github.io/project-intro/)

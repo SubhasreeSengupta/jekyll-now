@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatic Transcription for polyphonic Music 
+title: Automatic Transcription for Polyphonic Music 
 ---
 
 In the End-to-End transcription section, we are building a Convolutional Neural Network (CNN) model that takes an audio file as an input and provides the transcription for the Piano music. We train and evaluate the model on a dataset of polyphonic piano music. The use of CNN for transcription of polyphonic music is still an active area of research. 
@@ -24,9 +24,9 @@ We tried two different approaches to use this dataset to train our model. In bot
 1. Software synthesized music category for validation
 2. Real instrument recordings (Yamaha Disklavier) for testing.
 
-**Approach 1:** Use the whole dataset 
-Along with isolated notes, monophonic excerpts, random chords and usual chords   
-**Approach 2:** Use only full pieces in each type of instrument and recording conditions
+**Approach 1:** Use the whole dataset   
+Along with isolated notes, monophonic excerpts, random chords and usual chords     
+**Approach 2:** Use only full pieces in each type of instrument and recording conditions   
 There are 9 categories of recordings corresponding to different piano types and recording conditions, with 30 recordings per category. Therefore the dataset consists of 210 synthesised recordings and 60 real recordings.
 
 The Approach 1 was computationally more expensive and also was not efficient.  

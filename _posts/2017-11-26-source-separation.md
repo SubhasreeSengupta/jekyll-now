@@ -68,6 +68,19 @@ Since our target transcription is for piano only we use datasets, which have voc
 
 
 ## Results
+Below we visualization of the two source separated components:
+1. Original spectrogram 
+![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
+
+2. Only-voice spectrogram
+![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
+
+3. Only-music spectrogram
+![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
+
+
+
+
 
 
 ## References

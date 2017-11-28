@@ -58,5 +58,7 @@ Here are the results obtained during the training of the model.
 
 Bosch, J. J., Janer, J., Fuhrmann, F., & Herrera, P. “A Comparison of Sound Segregation Techniques for Predominant Instrument Recognition in Musical Audio Signals”, in Proc. ISMIR (pp. 559-564), 2012.
 
-[BACK HOME](https://subhasreesengupta.github.io/project-intro/) [PREV: Source Separation](https://subhasreesengupta.github.io/source-separation/)
+[BACK HOME](https://subhasreesengupta.github.io/project-intro/)  
+[PREV: Source Separation in Music](https://subhasreesengupta.github.io/source-separation/)   
+[NEXT: Automatic Transcription](https://subhasreesengupta.github.io/end-to-end-approach/)
 

@@ -67,19 +67,21 @@ We use the MIR-1K dataset (MIR-Music information retrieval).
 It comprises of a variety of songs, a total of 1000 musical clips (hence 1K in the name of dataset). This dataset is annotated with several musical features such as pitch, timbre, etc. We use this dataset since it is a popular dataset used in source separation literature. It captures various aspects of music and hence forms a very powerful dataset to be used for training for source separation. We needed a dataset which was rich and diverse in vocal and instrument audio signals and hence we used this dataset.   
 Since our target transcription is for piano only, we use datasets for evaluation which have vocal and only piano as the background instrument.
 
-
 ## Results
 Below we visualization of the two source separated components:
-1. Original spectrogram 
+1. Original spectrogram  
 
 ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
 
-2. Only-voice spectrogram
+2. Only-voice spectrogram  
 
 ![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
 
-3. Only-music spectrogram
+3. Only-music spectrogram  
 
 ![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
 
 ## References
+1. Huang, Po-Sen, et al. "Singing-Voice Separation from Monaural Recordings using Deep Recurrent Neural Networks." ISMIR. 2014.
+
+2. Chandna, Pritish, et al. "Monoaural audio source separation using deep convolutional neural networks." International Conference on Latent Variable Analysis and Signal Separation. Springer, Cham, 2017.

@@ -85,3 +85,7 @@ Below we visualization of the two source separated components:
 1. Huang, Po-Sen, et al. "Singing-Voice Separation from Monaural Recordings using Deep Recurrent Neural Networks." ISMIR. 2014.
 
 2. Chandna, Pritish, et al. "Monoaural audio source separation using deep convolutional neural networks." International Conference on Latent Variable Analysis and Signal Separation. Springer, Cham, 2017.
+
+3. MIR-1K dataset:
+Chao-Ling Hsu,   DeLiang Wang, Jyh-Shing Roger Jang, and Ke Hu, “ A Tandem Algorithm for Singing Pitch Extraction and Voice Separation from Music Accompaniment,” IEEE Trans. Audio, Speech, and Language Processing,  2011
+

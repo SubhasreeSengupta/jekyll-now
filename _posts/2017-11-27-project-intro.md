@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatic Music Transcription for Polyphonic Music
+title: Automatic Music Transcription for Polyphonic Music For Multiple Instruments
 ---
 
 # Project Objective
@@ -69,7 +69,7 @@ The graph below shows the improvement in test and validation accuracies.
 
 [Here](https://subhasreesengupta.github.io/predominant-instrument/) is the link that describes all the model and complete details of this step.
 
-# Automatic Transcription
+# Automatic Transcription for Polyphonic Music
 As part of our final step, we transcribe the individual instruments to generate musical notes. The source segregated input files are fed into the models trained for the particular instrument identified as the predominant instrument in the previous step.
 
 In our setup, we have trained a **ConvNet model** to transcribe the polyphonic piano music. The model takes the piano identified music as input and generates piano roll notation for the same. We evauated our model on the **MAPS** (MIDI Aligned Piano Sounds) dataset. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.

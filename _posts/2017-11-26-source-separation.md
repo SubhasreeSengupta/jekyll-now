@@ -39,7 +39,7 @@ We then have a masking layer which helps to smoothen the output for each source 
 
 ![_config.yml]({{ site.baseurl }}/images/Masking_eq.PNG)
 
- Here z_t represents the input spectrogram and yhat_1t and yhat_2t are the predictions for the output spectrogram from the neural network. The y~ values are the final separated source values, the masking helps in extracting each component out by masking out the values for the other source.
+ Here z_t represents the input spectrogram and yhat_1t and yhat_2t are the predictions for the output spectrogram from the neural network. The y^tilde values are the final separated source values, the masking helps in extracting each component out by masking out the values for the other source.
  
  The loss function corresponds to applying MSE+discriminative training. Mathematically, this is expressed as:
  

@@ -25,7 +25,7 @@ We use STFT transform function to create a time-frequency representation of our 
 
 Visually the architecture we use is:
 
-![_config.yml]({{ site.baseurl }}/images/Source_sep_model_updated.PNG)
+![_config.yml]({{ site.baseurl }}/images/source_sep_model_updated.PNG)
 
 The masking layer is a technique by which the probabilities from each dense layer for each source are used to apply a mask to the initial spectrogram to transform the spectrogram such that the source based on which the mask is applied is predominantly represented.
 

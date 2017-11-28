@@ -3,8 +3,6 @@ layout: post
 title: Predominant Instrument Identification 
 ---
 
-# Predominant Instrument Identification
-
 The goal of our project is music transcription for multiple instruments. This suggests that we need to transcribe for each of the instruments involved. For eg, if we have a music file which is a combination of piano, trumpet, guitar, we need to transcribe for each of these. That is why we did the source separation, to obtain individual music pieces for each instrument. Next block is for predominant music identification.
 
 Once we have the individual music files, we need to identify which instrument does it belong to, so that we can transcribe accordingly. So, in this step, we try to find out the predominant music iunstrument in the music file.

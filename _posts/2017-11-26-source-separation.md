@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Musical Source Separation
+title: Source Separation in Music
 ---
 
 Below we present a detailed overview of our approach for source separation of a musical piece. This part is divided into the following sections: First, we describe the pre-processing steps needed to feed the data into the model.  Next, we describe the model architecture and the details of the approach. Finally, we mention some evaluation metrics for our method and the performance of our model.

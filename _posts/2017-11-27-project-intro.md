@@ -36,15 +36,13 @@ We use the MIR-1K dataset for training the model. The output of the trained mode
 Here we provide visualizations of the output of our approach:
 
 1. Spectrogram for original image
- ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
+   ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
 
 2. Spectrogram for Only-voice audio file
-
-![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
+  ![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
 
 3. Spectrogram for Only-music audio file
-
-![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
+  ![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
 
 These visuals demonstrate the effectiveness of our approach. By visual inspection we can see a marked difference between the original spectrogram and the spectrogram corresponding to that of the only-voice audio file. The same can be seen for the spectrogram corresponding to that of the only-music audio file.  
 

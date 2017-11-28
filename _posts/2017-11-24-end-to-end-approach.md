@@ -5,10 +5,10 @@ title: End-to-end transcription for Piano Music
 ---
 
 # End-to-end transcription for Piano Music
-In the End to End transcription section, we are building a convulutional neural network model that takes a audio file as an input and provides the transcription for the Piano music. 
+In the End to End transcription section, we are building a convolutional neural network model that takes a audio file as an input and provides the transcription for the Piano music. 
 
 ## Preprocessing
-We transform the input audio to a time-frequency representation which is then input to the model. Here we experiment with the constant Q transform (CQT) as the input representation with 36 bins and a hop size of 512 samples. A padding with a window size of 7 is also added ot the input files.
+We transform the input audio to a time-frequency representation which is then input to the model. Here we experiment with the constant Q transform (CQT) as the input representation with 36 bins and a hop size of 512 samples. A padding with a window size of 7 is also added to the input files.
 
 The output files are converted to piano roll representation using pretty_midi python library.
 
@@ -24,6 +24,7 @@ Instrument: Software synthesized(The Grand 2, Akoustik Piano, The Black Grand) o
 We tried two approaches to use this dataset to train our model. In both approaches, we used 6 software synthesized music categories for training,  1 software synthesized music category for validation, and 2 real instrument recordings (Yamaha Disklavier) for testing.
 Approach 1 - Use all of the dataset: along with isolated notes, monophonic excerpts, random chords and usual chords
 Approach 2 - Use only full pieces in each type of instrument and recording conditions:  There are 9 categories of recordings corresponding to different piano types and recording conditions, with 30 recordings per category. Therefore the dataset consists of 210 synthesised recordings and 60 real recordings.
+Approach 3 - Use only Isolated notes and monophonic excerpts.
 
 The Approach 1 was computationally more expensive and also was not efficient.  
 
@@ -42,6 +43,7 @@ Approach 1: The entire dataset trained for 7 epochs before early stopping.
 
 Approach 2: In this approach, the different categories of full musical pieces were trained per folder. The training stopped at 63 epochs, 20 epochs, 7 epochs, 7 epochs, 7 epochs for the training folders.
 
+Approach 3:
 
 ## Results
 (output visualization)

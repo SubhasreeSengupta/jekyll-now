@@ -36,7 +36,7 @@ Here is our approach for the same.
 <<<<Describe the approach briefly in 1 para>>
 <<visualize the results >>
  
-Please find the detailed description of this step (including preprocessing, model, results) [here]()
+Please find the detailed description of this step (including preprocessing, model, results) [here](https://subhasreesengupta.github.io/source-separation/)
 
  
 # Predominant instrument classification:
@@ -53,12 +53,12 @@ The graph below shows the improvement in test and validation accuracies.
 ![_config.yml]({{ site.baseurl }}/images/acc_increase_curve.png)
 ![_config.yml]({{ site.baseurl }}/images/val_acc_improvement.png)
 
-[Here]() is the link that describes all the model and complete details of this step.
+[Here](https://subhasreesengupta.github.io/predominant-instrument/) is the link that describes all the model and complete details of this step.
 
 # Automatic transcription
 
 <<1 para briefing and visuzalization>>
 
 
-The architecture, dataset, and details of other steps are [here](<<link>>)
+The architecture, dataset, and details of other steps are [here](https://subhasreesengupta.github.io/end-to-end-approach/)
 

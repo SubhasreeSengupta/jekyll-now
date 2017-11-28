@@ -25,7 +25,7 @@ We tried two different approaches to use this dataset to train our model. In bot
 2. Real instrument recordings (Yamaha Disklavier) for testing.
 
 **Approach 1:** Use the whole dataset 
-Along with isolated notes, monophonic excerpts, random chords and usual chords
+Along with isolated notes, monophonic excerpts, random chords and usual chords   
 **Approach 2:** Use only full pieces in each type of instrument and recording conditions
 There are 9 categories of recordings corresponding to different piano types and recording conditions, with 30 recordings per category. Therefore the dataset consists of 210 synthesised recordings and 60 real recordings.
 

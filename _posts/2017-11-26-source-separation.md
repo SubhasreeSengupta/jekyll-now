@@ -3,7 +3,6 @@ layout: post
 title: Source Separation
 ---
 
-# Source Separation
 Below we present a detailed overview of 
 
 ## Preprecessing

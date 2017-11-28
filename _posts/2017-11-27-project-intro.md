@@ -19,21 +19,21 @@ We wish to use deep learning to address these challenges and successfully achiev
 
 In the sections below we describe each of the 3 main steps of the pipeline:
 1. Separation of the sources in the given music piece
-2. Identifying the predominant instrument in each of these piece
-3. Transcribe the music for the corresponding instrument based on the predominant instrument classification output
+2. Identifying the predominant instrument in each of these pieces
+3. Transcribe the music for the corresponding instrument based on the predominant instrument identification output
 
 # Musical Source Segregation:
 In order to make an end to end approach, we need to focus on filtering each musical source out of any given music piece. This is an ongoing area of research and is extremely difficult given:
 - We need to have ground truth labels for each source.
-+ We need to tune the loss function in such a way that it accounts for increasing the difference among each instrument at the time it is recognizing it. This process is also called discriminative training. 
++ We need to tune the loss function in such a way that it accounts for increasing the difference among each instrument at the time it is recognizing it. This process is also called _Discriminative Training_. 
 
-The motivation of this approach is to primarily segregate each and every source in a musical piece. However in order to accurately train for the source separation model, we require a massive annotated corpus with varied musical features. Hence, for the purposes of this project, we address separating two musical sources out of a musical piece. Specifically, we focus on separating vocal and instrument audio signals from a musical piece to obtain a better instrumental input for the downstream models. 
+The motivation of this approach is to primarily segregate a musical piece into every source present. However, in order to accurately train the model for source separation, we require a massive annotated corpus with varied musical features. Hence, for the purposes of this project, we address separating a given music piece into two musical sources. Specifically, we focus on separating vocal and instrument audio signals from a musical piece to obtain a better instrumental input for the downstream model. 
 
-We build upon the approach presented in (1). We modify the model architecture, by using an **LSTM based approach** instead of the RNN based approach in the paper, which gives us better results. Additionally, we design the loss function such that it accounts for increasing the difference between the two sources and incentivize the segregation.
+We build upon the approach presented in (1). We modified the model architecture, by using an **LSTM based approach** instead of the RNN based approach in the paper, which gives us better results. Additionally, we design the loss function such that it accounts for increasing the difference between the two sources and incentivize the segregation (discriminative learning).
 
-We use the MIR-1K dataset for training the model. The output of the trained model are two separated files, corresponding to the vocal and instrument components. The file containing the musical components corresponding to the instruments is used as input to evaluate the next stages of the project pipeline. 
+We use the MIR-1K dataset for training the model. The output of the trained model are two separated files, corresponding to the vocal and instrument components. The file containing the musical components corresponding to the instruments and is used as input to evaluate the next stages of the project pipeline. 
 
-Below, is a plot of the 1st 500 iterations of training the network:
+Below is a plot of the 1st 500 iterations of training the network:
 
 ![_config.yml]({{ site.baseurl }}/images/source_sep_loss_curve.PNG)
 
@@ -62,7 +62,7 @@ The graph below shows the improvement in test and validation accuracies.
 # Automatic transcription
 As part of our final step, we transcribe the individual instruments to generate musical notes. The source segregated input files are fed into the models trained for the particular instrument identified as the predominant instrument in the previous step.
 
-In our setup, we have trained a **ConvNet model** to transcribe the polyphonic piano music. The model takes the piano identified music as input and generates piano roll notation for the same. We evauated our model on the MAPS (MIDI Aligned Piano Sounds) dataset. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
+In our setup, we have trained a **ConvNet model** to transcribe the polyphonic piano music. The model takes the piano identified music as input and generates piano roll notation for the same. We evauated our model on the **MAPS** (MIDI Aligned Piano Sounds) dataset. The overall size of the database is about 40GB, i.e. about 65 hours of audio recordings.
 
 The combinatorially large output space is one of the challenging problems to be tackled in this step. The variability in the pitch and the timbral properties of the instrument is captured by the ConvNet model and is used to identify the notes at each time frame.
 

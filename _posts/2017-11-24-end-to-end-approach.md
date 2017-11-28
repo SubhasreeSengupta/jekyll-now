@@ -50,7 +50,7 @@ We preprocessed and trained the MAPS dataset using the GCP GPU instance (configu
 
 We used frame based metrics to assess the performance of the system. We compare the predicted values with the groud-truth and obtain the overall Fmeasure, precision, recall at each time frame. These values are then averaged over for all the frames in the piece and across the pieces.
 
-## Results
+## Results (%)
 Precision: 5.74  
 Recall: 39.76  
 f1 score: 0.1  

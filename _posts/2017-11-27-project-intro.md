@@ -80,7 +80,7 @@ We were able to preprocess, train and evaluate many approaches to obtain the tra
 
 The architecture, dataset, and details of other steps are [here](https://subhasreesengupta.github.io/end-to-end-approach/)
 
-## Conclusion
+# Conclusion
 
 In this project, our main goal was to achieve _Automatic transcription for multiple instruments using deep learning approach_. We divided this task into three sub-tasks.   
 The first was to separate out a musical mixture (real music) into each source. We focused on an approach to separate two musical sources, specifically vocals and background instruments. We presented an LSTM based model, with a  discriminative loss function specially designed to achieve this objective.   
@@ -89,7 +89,7 @@ Finally, we presented a ConvNET based approach for transcribing piano music.
 For each section, we train the models on different datasets, tune the hyperparameters, and try to achieve the best possible results for each part.  
 In the next section, we discuss some of the future directions of this project, to transform it into the product orginally envisioned.
 
-## Future Work
+# Future Work
 
 There are several directions of future work.  
 One, would be to improve upon the source separation model to extend it to identify other sources as well. This would entail a different model architecture and a different loss function for each source (instrument).  

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: End-to-end transcription for Piano Music 
+title: Automatic Transcription for polyphonic Music 
 ---
 
 In the End-to-End transcription section, we are building a Convolutional Neural Network (CNN) model that takes an audio file as an input and provides the transcription for the Piano music. We train and evaluate the model on a dataset of polyphonic piano music. The use of CNN for transcription of polyphonic music is still an active area of research. 

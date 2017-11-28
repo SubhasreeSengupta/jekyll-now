@@ -35,7 +35,7 @@ We use the MIR-1K dataset for training the model. The output of the trained mode
 
 Here we provide visualizations of the output of our approach:
 
-1. Spectrogram for original image
+1. Spectrogram for original non-segregated audio file
    ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
 
 2. Spectrogram for Only-voice audio file

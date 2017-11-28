@@ -4,8 +4,8 @@ layout: post
 title: End-to-end transcription for Piano Music 
 ---
 
-# End-to-end transcription for Piano Music
-In the End to End transcription section, we are building a convolutional neural network model that takes a audio file as an input and provides the transcription for the Piano music. 
+# End-to-end neural network transcription for Piano Music
+In the End to End transcription section, we are building a convolutional neural network model that takes a audio file as an input and provides the transcription for the Piano music. We train and evaluate the model on a dataset of polyphonic piano music. The use of convolutional networks for transcription of polyphonic music is still an active area of research. 
 
 ## Preprocessing
 We transform the input audio to a time-frequency representation which is then input to the model. Here we experiment with the constant Q transform (CQT) as the input representation with 36 bins and a hop size of 512 samples. A padding with a window size of 7 is also added to the input files.

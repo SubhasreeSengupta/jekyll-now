@@ -25,7 +25,7 @@ In the sections below we describe each of the 3 main steps of the pipeline:
 3. Do transcription for each file based on the labels obtained for them 
 
 
-# Instrument Segregation:
+# Musical Source Segregation:
 In order to make an end to end approach, we need to focus on filtering each instrument out of any given music piece. This part is analogous to source separation in music, which is an ongoing area of research and is extremely difficult given:
 - Need to have ground truth labels for each source (instrument)
 + Tune the loss function in such a way that the it accounts for increasing the difference among each instrument as the time it is recongizing it (Discriminative learning). 

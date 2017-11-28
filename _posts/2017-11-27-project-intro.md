@@ -35,14 +35,15 @@ We use the MIR-1K dataset for training the model. The output of the trained mode
 
 Here we provide visualizations of the output of our approach:
 
-1. Spectrogram for original non-segregated audio file
+1. [Spectrogram for original audio file](https://drive.google.com/open?id=1QjMh9vjJPVQXG9xwsGxq1VP4YvxpX2jN)
    ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
+   
+2. [Spectrogram for Only-music audio file](https://drive.google.com/open?id=1ZKPF8j3suGbIfG61tecdal4NapNigrEw)
+  ![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
 
-2. Spectrogram for Only-voice audio file
+3. [Spectrogram for Only-voice audio file](https://drive.google.com/open?id=1Qodjx8b8jD4T6Dm2RSkeTGHf_Fcf8flh)
   ![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
 
-3. Spectrogram for Only-music audio file
-  ![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
 
 These visuals demonstrate the effectiveness of our approach. By visual inspection we can see a marked difference between the original spectrogram and the spectrogram corresponding to that of the only-voice audio file. The same can be seen for the spectrogram corresponding to that of the only-music audio file.  
 

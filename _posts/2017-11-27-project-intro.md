@@ -27,16 +27,21 @@ In the sections below we describe each of the 3 main steps of the pipeline:
 
 
 # Musical Source Segregation:
-In order to make an end to end approach, we need to focus on filtering each musical source out of any given music piece. which is an ongoing area of research and is extremely difficult given:
-- Need to have ground truth labels for each source (instrument)
-+ Tune the loss function in such a way that the it accounts for increasing the difference among each instrument as the time it is recongizing it (Discriminative learning). 
+In order to make an end to end approach, we need to focus on filtering each musical source out of any given music piece. This is an ongoing area of research and is extremely difficult given:
+- We need to have ground truth labels for each source.
++ We need to tune the loss function in such a way that the it accounts for increasing the difference among each instrument as the time it is recongizing it. This process is also called discriminative training. 
 
+The motivation of this approach is primarily to be able to segregate each and every musical source in a musical piece. However in order to do again we will need a massive corpora that has various musical features for the source separation to be trained accurately. Hence, for the purposes for this project we adddress separating two musical sources out of a musical piece. Specifically, we focus on separating vocal and instrument audio signals from a musical piece. 
+We build upon the approach presented in (1). We modify the model architecture, by using an LSTM based approach instead of the RNN based approach in the paper, which gives us better results. Additionally, we design the loss function such that it accounts for increasing the difference between the two sources.
 
-Here is our approach for the same.
+We use the MIR-1K dataset for training the model. The output of the trained model are two separated files, corresponding to the vocal and instrument components separately. The file containing the musical components corresponding to the instruments is used as input to evaluate the next stages of the project pipeline. 
 
-<<<<Describe the approach briefly in 1 para>>
-<<visualize the results >>
- 
+Below, is a plot of the 1st 500 iterations of training the network:
+
+![_config.yml]({{ site.baseurl }}/images/source_sep_loss_curve.PNG)
+
+A direction of future work to adapt/modify the model architecture such that it can not only segragate vocals and instruments but also can separted between instruments as well. 
+
 Please find the detailed description of this step (including preprocessing, model, results) [here](https://subhasreesengupta.github.io/source-separation/)
 
  

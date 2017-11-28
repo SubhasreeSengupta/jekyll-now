@@ -36,15 +36,20 @@ An Early Stopping callback with a patience of 5 was added to stop the training o
 
 ## Training and setup
 
-We preprocessed and trained the MAPS dataset in the GCP GPU instance <<add config>>. 
+We preprocessed and trained the MAPS dataset in the GCP GPU instance(configuration: 1 Nvidia Tesla K80 GPU, 8 vCPUs, 52 GB RAM, 100 GB Memory). A high epoch value of 1000 was set to verify if there is any improvements in the accuracies.
 
-Approach 1: The m
+Approach 1: The entire dataset trained for 7 epochs before early stopping. 
+
+Approach 2: In this approach, the different categories of full musical pieces were trained per folder. The training stopped at 63 epochs, 20 epochs, 7 epochs, 7 epochs, 7 epochs for the training folders.
 
 
 ## Results
 (output visualization)
 
 ## References
+
+• An End-to-End Neural Network for Polyphonic Piano Music Transcription, Siddharth Sigtia, Emmanouil Benetos, and Simon Dixon
+
 MAPS Dataset:
-V. Emiya, R. Badeau and B. David, Multipitch estimation of piano sounds using a new probabilistic spec tral smoothness principle, IEEE Transactions on Audio, Speech and Language Processing, (to be published);
+• V. Emiya, R. Badeau and B. David, Multipitch estimation of piano sounds using a new probabilistic spec tral smoothness principle, IEEE Transactions on Audio, Speech and Language Processing, (to be published);
 • V. Emiya, Transcription automatique de la musique de piano, Thèse de doctorat, Telecom Paris-Tech, 2008 (in French).

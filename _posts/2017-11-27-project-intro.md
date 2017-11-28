@@ -35,13 +35,13 @@ We use the MIR-1K dataset for training the model. The output of the trained mode
 
 Here we provide visualizations of the output of our approach:
 
-1. [Spectrogram for original audio file](https://drive.google.com/open?id=1QjMh9vjJPVQXG9xwsGxq1VP4YvxpX2jN)
+1. Spectrogram for original audio file
    ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
    
-2. [Spectrogram for Only-music audio file](https://drive.google.com/open?id=1ZKPF8j3suGbIfG61tecdal4NapNigrEw)
+2. Spectrogram for Only-music audio file
   ![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
 
-3. [Spectrogram for Only-voice audio file](https://drive.google.com/open?id=1Qodjx8b8jD4T6Dm2RSkeTGHf_Fcf8flh)
+3. Spectrogram for Only-voice audio file
   ![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
 
 

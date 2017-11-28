@@ -3,49 +3,45 @@ layout: post
 title: Predominant Instrument Identification 
 ---
 
-The goal of our project is music transcription for multiple instruments. This suggests that we need to transcribe for each of the instruments involved. For eg, if we have a music file which is a combination of piano, trumpet, guitar, we need to transcribe for each of these. That is why we did the source separation, to obtain individual music pieces for each instrument. Next block is for predominant music identification.
+The goal of our project is music transcription for multiple instruments. This suggests that we need to transcribe for each of the instruments involved. For eg, if we have a music file which is a combination of piano, cello, trumpet, guitar, we need to transcribe for each of these. Hence we complete the source segregation to obtain approximate individual music pieces for each instrument. Next block is for predominant music instrument identification.
 
-Once we have the individual music files, we need to identify which instrument does it belong to, so that we can transcribe accordingly. So, in this step, we try to find out the predominant music iunstrument in the music file.
-We check this for each file obtained as an output from the source separation part. we get the label of the predominant instrument as the output.
+In our setup, we use the analogy that even music can be represented as image and a **Convolutional Neural Network (CNN)** can be used to learn the pattern in the music. The timbral properties can be captured and are needed to identify the predominant instrument in the music piece. Our CNN model takes the spectrogram images generated from after preprocessing the audio files.
 
-We use the analogy that even music can be represented as image and the n CNN can be used to learn the pattern and identify the music. For this we need to preprocess audio files and generate images out of that. 
 Here are the steps that are involved for this task.
 
-## Preprecessing
-The steps involved in the  aduio file (.wav format) are as follows:
+## Preprocessing
+The steps involved to process the audio files (.wav format) are as follows:
 - The stereo input is converted to mono by taking the mean of the two channels.
-+ the input is downsampled from 44k to 22k (helps in removing noises possibly included in the range above this)
++ The input is downsampled from 44k to 22k (helps in removing noises possibly included in the range above this)
 - Normalize the audio file
 + Convert it to a time-frequency representation using STFT
-- Convert this into mel-scale and thus we obtain sprctrogram which is given as input to the CNN
+- Convert this into mel-scale and thus we obtain spectrogram which is given as input to the CNN
 
-The images were organised in folders according to the instrument, whereas we needed labels with instruments. So we need more processing on these images.
-- Convert into grayscale image. This refrains the model to learn unnecessary information. It is supposed to learn the patterns in the image and color does not give any information about the audio files.
-+ Convert it into the dimensions mentioned in the paper
+The images were organized in folders according to the instrument, whereas we needed labels with instruments. So we need more processing of these images.
+- Convert into a grayscale image. This refrains the model to learn unnecessary information. It is supposed to learn the patterns in the image and color does not give any information about the audio files.
++ Reshape the mel-spectogram to time x Number of filters x frequency (1 x 43 x 128)
 _ Assign labels to each image based on the folder they belong
 + divide the dataset into test, train, validation.
 
 
-
 ## Dataset
-We use **IRMAS** dataset to train this CNN model. It has musical excerpts with annotations of the predominant instrument present and is intended to be used for the automatic identification of the predominant instrument in music.   
+We use **IRMAS** dataset to train our CNN model. It has musical excerpts with annotations of the predominant instrument present and is intended to be used for the automatic identification of the predominant instrument in music.   
 
-The dataset is divided into training data and testing data. Training data has 6705 audio files each is 3 sec excerpt.
-The annotations are for 11 pitched instruments. The testing part has 2874 audio files with lengths between 5 sec and 20 sec. These testing files had one or more target labels.
+The dataset is divided into training data and testing data. Training data has 6705 audio files with each file of 3 sec excerpt.
+The annotations are for 11 pitched instruments. The testing data has 2874 audio files with lengths between 5 sec and 20 sec. These testing files have one or more target labels.
 
 ## Model Description
 ![_config.yml]({{ site.baseurl }}/images/predominant_inst_model.png)
 
-The above figure describes the architecture that we use. It is mentioned in th paper cited below. 
-#### We added a batch normalization layer which helped improve the accuracy.
+The above figure describes the architecture that we use.
 
-## Training and setup
-- We have trained the CNN model on the GCP Cloud instance.
-+ We trained the model for 10 epochs initially and we got 15% accuracy (which is as good as guessing the instrument). But we observed the accuracy improved constantly. 
-- We realized the size of the image is larger compaerd to normal images, so we trained the model for 150 epochs with early stopping and a patience of 5. The training stops after 70 epochs. The accuracy thus obtained is ~60%.
-+ We also have saved checkpoints after every epoch which will help us resume in case of failure and also for early stopping.
-- We used Tensorboard for visualization of the loss curves, accuracy curves.
+#### Addition of the batch normalization layer helped us in improving the accuracy.
 
+## Training and Setup
+- We have trained the CNN model on the GCP GPU instance (configuration: 1 Nvidia Tesla K80 GPU, 8 vCPUs, 52 GB RAM, 100 GB Memory)..
++ The validation accuracy steadily increased with the increase in the number of epochs trained. We initially observed a 15% accuracy after training the model for 10 epochs (which is as good as guessing the instrument) and the accuracy improved constantly later on with more training. 
+- We realized the size of the image is larger compared to normal images. Hence we trained the model for 150 epochs with early stopping and a patience of 5. The training early stopped after 70 epochs with a test accuracy of ~60%.
++ We used Tensorboard for visualization of the loss curves, accuracy curves. As part of training setup we saved checkpoints after every epoch, which helps us to resume in case of failure and for early stopping.
 
 
 ## Results
@@ -56,5 +52,4 @@ Here are the results obtained during the training of the model.
 
 ## References
 
-For this sectione, we referred to the paper "Deep convolutional neural networks for predominant
-instrument recognition in polyphonic music". We tried to implement this paper on our own. [Here](https://arxiv.org/pdf/1605.09507.pdf) is the link to the paper.
+For this section, we referred to the paper **"Deep convolutional neural networks for predominant instrument recognition in polyphonic music"**. [Here](https://arxiv.org/pdf/1605.09507.pdf) is the link to the paper.

@@ -9,7 +9,13 @@ title: Obstacles faced during the project
 Here is the description of the basic setup that we used.
 
 ## Google Cloud instance: 
-Set up a gpu instance and set up tensorflow other dependencies by installing from sources. This improves the performance of the GPU. We were able to achieve a speedup of about 20 times compared to the that on other compute instances.
+- Set up a GPU instance on Google Clous Platform and setting up tensorflow other dependencies by installing from sources.
++ To leverage the power of GPU, we had to install all the dependencies from sources, which needed carefulness and technical know-how.
+- Installed Bazel, CuDNN, etc.
++ There were a lot of issues while installing this. The documentation never mentioned which version of CuDNN is compatible with Tensorflow. So we failed the first time after getting done halfway.
+- It took a time to figure the compatible versions and after number of attempts to learn from different sources, we managed to install the required depencies without version issues.
++ This process was very time consuming.
+- But this improves the performance of the system as it leverages GPU. We were able to achieve a speedup of about 20 times compared to the that on other compute instances.
 
 ## AWS:
 We used **g2.2xlarge** instance, but that was not helpful while we trained and preprocessed large datasets. There was not much difference in performance.
@@ -40,3 +46,4 @@ Again we did this multiple times trying on different datasets.
 
 Transcription of polyphonic music is a complex task due to the combinatorially large output space. As the output corresponds to high-dimensional vectors for each time frame for a varied length piece, this is computationally intensive. The inference of the trained results to map them to the notes at each time frame involves multiple post processing steps. We tried multiple ways to convert the probabilistic sigmoid output of the fully connected layer like threshold calculation to classify the notes for each time frame during training. 
 
+[BACK HOME](https://subhasreesengupta.github.io/project-intro/)

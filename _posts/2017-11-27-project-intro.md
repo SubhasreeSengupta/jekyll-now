@@ -8,11 +8,12 @@ Music is an integral part of human life. It has its own charm and magic. Yet, in
 
 In our project, we would like to address the problem of "Automatic Music Transcription for Polyphonic Music involving Multiple Instruments". Automatic Music Transcription (AMT) is an open problem in Music Information Retrieval(MIR). AMT aims to generate a symbolic representation, a near-score like transcription, given a polyphonic musical piece. This is a difficult problem for the following reasons: 
 - In polyphonic music, there exists a complex interaction and overlap of harmonies arising from different acoustic signals in the melody.
-+ Separating the sources of music in a given piece with multiple instruments is itself a very challanging task. So AMT fails to match human performance. We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim.
++ Separating the sources of music in a given piece with multiple musical sources (such as vocals, various instruments)  is itself a very challanging task. So AMT fails to match human performance.
+We wish to use deep learning to address these challenges and then framework to succesfully achieve the mentioned aim.
 
-In order to transcribe each instrument in a musical piece we first addressed the challenge of instrument separation. The separated wav files corresponding to different instruments are obtained as a result of this. Next, we design a "predominant instrument classifier", the goal of which is to identify the predominant instrument in each musical piece. Thus, we comet o know the instrument in the given music piece. Once we know this, we give this as input to the end-to-end transcription model trained for the corresponding instrument which uses deep learning for the same. As a result, we will be able to transcribe the given music file, which is the ultimate goal of our project.
+In order to transcribe each instrument in a musical piece we first addressed the challenge of musical source separation. Next, we design a "predominant instrument classifier", the goal of which is to identify the predominant instrument in each musical piece. Thus, we comet o know the instrument in the given music piece. Once we know this, we give the corresponding wav file as input to the end-to-end CONVNET based transcription model trained for the identified predominant instrument. As a result, we will be able to transcribe the given music file, which is the ultimate goal of our project.
 
-Looking into the last part, we need to train model according to the instruents. Only model trained on Piano music will be able to transcribe music. This requires datasets for each instrument for training, also, it the training is resouce intensive. Given the time and resource constraints, we currently focus on transcription of Piano music. But the pipeline proposed can give results for multiple instruments. 
+Looking into the last part, we need to train model according to the instruents. This requires datasets for each instrument for training, also, it the training is resouce intensive. Given the time and resource constraints, we currently focus on transcription of Piano music. But the pipeline proposed can be adapted to give results for multiple instruments. 
 
 # Project Pipeline
 
@@ -26,7 +27,7 @@ In the sections below we describe each of the 3 main steps of the pipeline:
 
 
 # Musical Source Segregation:
-In order to make an end to end approach, we need to focus on filtering each instrument out of any given music piece. This part is analogous to source separation in music, which is an ongoing area of research and is extremely difficult given:
+In order to make an end to end approach, we need to focus on filtering each musical source out of any given music piece. which is an ongoing area of research and is extremely difficult given:
 - Need to have ground truth labels for each source (instrument)
 + Tune the loss function in such a way that the it accounts for increasing the difference among each instrument as the time it is recongizing it (Discriminative learning). 
 

@@ -27,9 +27,31 @@ Visually the architecture we use is:
 
 ![_config.yml]({{ site.baseurl }}/images/source_sep_model_updated.PNG)
 
-The masking layer is a technique by which the probabilities from each dense layer for each source are used to apply a mask to the initial spectrogram to transform the spectrogram such that the source based on which the mask is applied is predominantly represented.
+The intuition behind using an LSTM is two-fold. First, it can capture the neighbouring features in the input spectra. Second, it has been shown to be more stable than regular RNNs. Since, the pre-processing above, transforms the data in a sequence of time frames that further validates the use of RNNs, to capture the effect of time-sequencing.
 
-Finally, an inserve stft transform is applied to convert the masked spectrogram which a time-frequency magnitude representation back to audio signals, which we store in .wav file. 
+We apply 3 LSTMs layers, with number of hidden units = 1000. These are hyerparameters in our model and are user chosen. We tested with other values of hyperparameters but the above configuration gave the best results. 
+
+The two dense layers are used to identify each source out of the mixed spectra. The activation function used for the dense layers is Relu. 
+
+The application of the masking layer is to smooth out the output for each source obtained from each dense layer. Mathematically, this is expressed as : 
+
+![_config.yml]({{ site.baseurl }}/images/Masking_eq.PNG)
+
+ z_t represents the spectrogram which is the input and y_1 and y_2 are the predictions for the output spectrogram. The y_hat values are the final separated source values, the masking helps in extracting each component out by masking out the values for the other source.
+ 
+ The loss function correspondings to applying MSE+discriminative training. Mathematically, this is expressed as:
+ 
+ ![_config.yml]({{ site.baseurl }}/images/Masking_eq.PNG)
+ 
+ The 1st and the third terms represent the MSE error between the predicted and the actual output and the 2nd and the 4th term are the discrimative terms to increase the difference between the predicted sources with respect to the actual sources.
+ 
+ We set gamma to be **0.5**, which is again a model choice.
+ 
+ The main highlight of this framework is the fact we not only train w.r.t to the parameters of the model but also with respect the masking layer. This is very practically useful, since our final objective is to improve the quality of the masked output and not the individual predictions for each source.
+ 
+ The actual output (represented above as y_1,y_2) represent the two channels in the input dual channel audio file.
+ 
+Finally, an inserve stft transform is applied to convert the masked spectrogram which a time-frequency magnitude representation back to audio signals, which we store in .wav file and which forms the input which we feed into the transcription model. 
 
 Below we show a visual captured from the training of the network:
 ![_config.yml]({{ site.baseurl }}/images/source_sep_loss_curve.PNG)
@@ -41,14 +63,11 @@ The model achieves separating the outputs into two parts, separating by each ins
 
 ## Dataset
 We use the MIR-1K dataset (MIR stands for Music information retrieval). 
-It comprises of a variety of songs, a total of 1000 musical clips. This dataset is annotated with several musical features such as pitch, timbre, etc. We use this dataset since it is a popular dataset used in source separation literature as it captures various aspects of music and hence forms a very powerful dataset to be used for training. 
-We use to the .wav files (audio signals) to build and test our model.
+It comprises of a variety of songs, a total of 1000 musical clips. This dataset is annotated with several musical features such as pitch, timbre, etc. We use this dataset since it is a popular dataset used in source separation literature as it captures various aspects of music and hence forms a very powerful dataset to be used for training for source separation. We needed a dataset which was rich and diverse in vocal and instrument audio signals and hence we used this dataset. 
+Since our target transcription is for piano only we use datasets, which have vocal and only piano as the background instruments.
 
-
-
-## Training and setup
 
 ## Results
-(output visualization)
+
 
 ## References

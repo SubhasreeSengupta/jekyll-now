@@ -22,7 +22,7 @@ In the sections below we describe each of the 3 main steps of the pipeline:
 2. Identifying the predominant instrument in each of these pieces
 3. Transcribe the music for the corresponding instrument based on the predominant instrument identification output
 
-# Musical Source Segregation:
+# Musical Source Segregation
 In order to make an end to end approach, we need to focus on filtering each musical source out of any given music piece. This is an ongoing area of research and is extremely difficult given:
 - We need to have ground truth labels for each source.
 + We need to tune the loss function in such a way that it accounts for increasing the difference among each instrument at the time it is recognizing it. This process is also called _Discriminative Training_. 
@@ -42,7 +42,7 @@ A direction of future work to adapt/modify the model architecture such that it c
 Please find the detailed description of this step (including preprocessing, model, results) [here](https://subhasreesengupta.github.io/source-separation/)
 
  
-# Predominant instrument classification:
+# Predominant instrument classification
 Once we have the segregated inputs based on the instruments, we need to identify the predominant source for each. This is the second step of the pipeline that is required to avoid loss of information in the first step and also to reassure the classification. In our setup, the model has been trained to identify 11 instruments. We give a .wav file as an input to the model and get the label of the predominant instrument present in the music file.
 
 **We were able to get 60% test accuracy on the identification of predominant instrument. **

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatic Music Transcription for Polyphonic Music for Multiple Instruments
+title: Automatic Music Transcription for Polyphonic Music
 ---
 
 # Project Objective

@@ -52,4 +52,4 @@ Here are the results obtained during the training of the model.
 
 ## References
 
-For this section, we referred to the paper **"Deep convolutional neural networks for predominant instrument recognition in polyphonic music"**. [Here](https://arxiv.org/pdf/1605.09507.pdf) is the link to the paper.
+1. Han, Yoonchang, et al. "Deep convolutional neural networks for predominant instrument recognition in polyphonic music." IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP) 25.1 (2017): 208-221.

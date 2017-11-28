@@ -19,21 +19,34 @@ The steps involved in the  aduio file (.wav format) are as follows:
 + Convert it to a time-frequency representation using STFT
 - Convert this into mel-scale and thus we obtain sprctrogram which is given as input to the CNN
 
+The images were organised in folders according to the instrument, whereas we needed labels with instruments. So we need more processing on these images.
+- Convert into grayscale image. This refrains the model to learn unnecessary information. It is supposed to learn the patterns in the image and color does not give any information about the audio files.
++ Convert it into the dimensions mentioned in the paper
+_ Assign labels to each image based on the folder they belong
++ divide the dataset into test, train, validation.
+
+
+
 ## Dataset
-We use IRMAS dataset to train this CNN model. It has musical excerpts with annotations of the predominant instrument present and is intended to be used for the automatic identification of the predominant instrument in music.
+We use **IRMAS** dataset to train this CNN model. It has musical excerpts with annotations of the predominant instrument present and is intended to be used for the automatic identification of the predominant instrument in music.   
 
 The dataset is divided into training data and testing data. Training data has 6705 audio files each is 3 sec excerpt.
 The annotations are for 11 pitched instruments. The testing part has 2874 audio files with lengths between 5 sec and 20 sec. These testing files had one or more target labels.
 
 ## Model Description
-We use a CNN model. The architecture is mentioned in the paper cited below. 
 ![_config.yml]({{ site.baseurl }}/images/predominant_inst_model.png)
 
+The above figure describes the architecture that we use. It is mentioned in th paper cited below. 
+#### We added a batch normalization layer which helped improve the accuracy.
 
 ## Training and setup
-We trained the model for 10 epochs initially and we got 15% accuracy (which is as good as guessing the instrument). But we observed the accuracy improved constantly. Then we realized the size of the image is larger compaerd to normal images, so we trained the model for 150 epochs with early stopping. The training stops after 70 epochs. The accuracy thus obtained is ~60%.
+- We have trained the CNN model on the GCP Cloud instance.
++ We trained the model for 10 epochs initially and we got 15% accuracy (which is as good as guessing the instrument). But we observed the accuracy improved constantly. 
+- We realized the size of the image is larger compaerd to normal images, so we trained the model for 150 epochs with early stopping and a patience of 5. The training stops after 70 epochs. The accuracy thus obtained is ~60%.
++ We also have saved checkpoints after every epoch which will help us resume in case of failure and also for early stopping.
+- We used Tensorboard for visualization of the loss curves, accuracy curves.
 
-#### We added a batch normalization layer which helped improve the accuracy.
+
 
 ## Results
 Here are the results obtained during the training of the model.

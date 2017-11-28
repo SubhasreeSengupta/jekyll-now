@@ -33,9 +33,20 @@ We build upon the approach presented in (1). We modified the model architecture,
 
 We use the MIR-1K dataset for training the model. The output of the trained model are two separated files, corresponding to the vocal and instrument components. The file containing the musical components corresponding to the instruments and is used as input to evaluate the next stages of the project pipeline. 
 
-Below is a plot of the 1st 500 iterations of training the network:
+Here we provide visualizations of the output of our approach:
 
-![_config.yml]({{ site.baseurl }}/images/source_sep_loss_curve.PNG)
+1. Spectrogram for original image
+ ![_config.yml]({{ site.baseurl }}/images/original_spec.PNG)
+
+2. Spectrogram for Only-voice audio file
+
+![_config.yml]({{ site.baseurl }}/images/voice_spec.PNG)
+
+3. Spectrogram for Only-music audio file
+
+![_config.yml]({{ site.baseurl }}/images/music_spec.PNG)
+
+These visuals demonstrate the effectiveness of our approach. By visual inspection we can see a marked difference between the original spectrogram and the spectrogram corresponding to that of the only-voice audio file. The same can be seen for the spectrogram corresponding to that of the only-music audio file.  
 
 A direction of future work to adapt/modify the model architecture such that it can not only segregate vocals and instruments but also can separate between instruments as well. 
 
@@ -45,7 +56,7 @@ Please find the detailed description of this step (including preprocessing, mode
 # Predominant instrument classification
 Once we have the segregated inputs based on the instruments, we need to identify the predominant source for each. This is the second step of the pipeline that is required to avoid loss of information in the first step and also to reassure the classification. In our setup, the model has been trained to identify 11 instruments. We give a .wav file as an input to the model and get the label of the predominant instrument present in the music file.
 
-**We were able to get 60% test accuracy on the identification of predominant instrument. **
+**We were able to get 60% test accuracy on the identification of predominant instrument.**
 
 The images of the loss functions are here.
 

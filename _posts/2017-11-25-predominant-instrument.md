@@ -31,12 +31,19 @@ The annotations are for 11 pitched instruments
 The testing part has 2874 audio files with lengths between 5 sec and 20 sec. These testing files had one or more target labels.
 
 ## Model Description
+We use a CNN model. The architecture is mentioned in the paper cited below. 
+![_config.yml]({{ site.baseurl }}/images/predominant_inst_model.png)
 
 
 ## Training and setup
+We trained the model for 10 epochs initially and we got 15% accuracy (which is as good as guessing the instrument). But we observed the accuracy improved constantly.
+Then we realized the size of the image is larger compaerd to normal images, so we trained the model for 150 epochs with early stopping. The accuracy thus obtained is ~60%.
 
 ## Results
-(output visualization)
+Here are the results obtained during the training of the model.
+![_config.yml]({{ site.baseurl }}/images/after_epoch_90.png)
+![_config.yml]({{ site.baseurl }}/images/after_epoch_140.png)
+
 
 ## References
 

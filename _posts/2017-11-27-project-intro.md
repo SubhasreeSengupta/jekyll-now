@@ -94,5 +94,5 @@ In the next section, we discuss some of the future directions of this project, t
 There are several directions of future work.  
 One, would be to improve upon the source separation model to extend it to identify other sources as well. This would entail a different model architecture and a different loss function for each source (instrument).  
 Another direction would be make a flexible transcription model, that can transcribe for any musical source.   
-Both, these extensions are highly complex and hence are beyond the scope of our current project objective.
+Both these extensions are highly complex and hence are beyond the scope of our current project objective.
 

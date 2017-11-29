@@ -63,7 +63,7 @@ We were able to succesfully complete the preprocessing and training of the model
 
 The issues faced involved finding the most likely notes per time frame and each time frame. The post processing method resulted in converting the output generated to all zeros and hence a very low precision values.
 
-Also, we observed a very high validation and training accuracy and we suspect a severe overfitting in the model. Various attempts to train the model with different dataset combinations, hyperparameter values and pre processing methods could not improve the model's generalization.
+Also, we observed a very high validation and training accuracy and we suspect an overfitting in the model. Various attempts to train the model with different dataset combinations, hyperparameter values and pre processing methods attempted to improve the model's generalization but did not get satisfactory results.
 
 ## Possible Improvements
 
